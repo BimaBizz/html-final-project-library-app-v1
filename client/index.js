@@ -73,7 +73,7 @@ async function handleClickDeleteButton(bookId) {
   try {
     const confirmation = confirm('Apakah anda yakin ingin menghapus buku ini?');
     if (!confirmation) {
-      return;
+      return await deleteBook(bookId);
     }
 
     //panggil function deleteBook dengan parameter bookId
@@ -336,7 +336,7 @@ async function deleteBook(bookId) {
       id buku yang akan dihapus dikirimkan sebagai parameter function
     */
     // TODO: answer here
-    await fetch(`http://localhost:3333/books/${bookId}`, {
+    hapus = await fetch(`http://localhost:3333/books/${bookId}`, {
       method: 'DELETE'
     })
   } catch (error) {
