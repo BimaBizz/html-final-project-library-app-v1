@@ -57,9 +57,9 @@ async function handleClickEditButton(bookId) {
     // Ambil data buku dari server berdasarkan id, simpan hasilnya ke variabel currentBook
     // TODO: answer here
     const response = await fetch(`http://localhost:3333/books/${bookId}`);
-    if (!response.ok) {
-      throw new Error('Response was not ok');
-    }
+    // if (!response.ok) {
+    //   throw new Error('Response was not ok');
+    // }
     currentBook = await response.json();
 
     currentPage = 'edit';
@@ -71,14 +71,15 @@ async function handleClickEditButton(bookId) {
 }
 async function handleClickDeleteButton(bookId) {
   try {
-    const confirmation = confirm('Apakah anda yakin ingin menghapus buku ini?');
-    if (!confirmation) {
-      return await deleteBook(bookId);
-    }
+    // const confirmation = confirm('Apakah anda yakin ingin menghapus buku ini?');
+    // if (!confirmation) {
+    //   return;
+    // }
 
     //panggil function deleteBook dengan parameter bookId
     // TODO: answer here
     await deleteBook(bookId);
+
     loadPage();
   } catch (error) {
     console.log(error);
@@ -339,6 +340,7 @@ async function deleteBook(bookId) {
     hapus = await fetch(`http://localhost:3333/books/${bookId}`, {
       method: 'DELETE'
     })
+
   } catch (error) {
     console.log(error);
     console.log('Terjadi kesalahan saat menghapus buku');

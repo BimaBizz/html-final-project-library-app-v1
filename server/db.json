@@ -1,20 +1,6 @@
 {
   "books": [
     {
-      "title": "Negeri 5 Menara",
-      "author": "Ahmad Fuadi",
-      "year": 2009,
-      "quantity": 6,
-      "id": 2
-    },
-    {
-      "id": 3,
-      "title": "Dilan: Dia adalah Dilanku Tahun 1990",
-      "author": "Pidi Baiq",
-      "year": 2014,
-      "quantity": 2
-    },
-    {
       "id": 4,
       "title": "Ayat-Ayat Cinta",
       "author": "Habiburrahman El Shirazy",
